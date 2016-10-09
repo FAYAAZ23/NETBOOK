@@ -1,4 +1,4 @@
-<style>
+  <style>
   .modal-header, h4, .close {
       background-color: #5cb85c;
       color:white !important;
@@ -14,14 +14,13 @@
 
 			<!-- Modal content-->
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 15px 35px;">
-					<h4>NETBOOK Login</h4>
+				<div class="modal-header" style="background-color: #5bc0de;">
+					<h5>NETBOOK Login</h5>
 				</div>
 				<div class="modal-body" style="padding: 35px 35px;">
 					<form action="${pageContext.request.contextPath}/perform_login" method="post">
 						<div class="form-group form-group-sm">
-
-							<div class="input-group">
+                                <div class="input-group">
 								<div class="input-group-addon">
 									<i class="glyphicon glyphicon-user"></i>
 								</div>
@@ -38,7 +37,7 @@
 							</div>
 							<br>
 						</div>
-						<button type="submit" class="btn btn-success  btn-block">
+						<button type="submit" class="btn btn-info  btn-block login-button">
 							<span class="glyphicon glyphicon-off"></span> Log In
 						</button>
 					</form>

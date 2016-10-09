@@ -43,7 +43,8 @@
   <!-- ModalRegistration Form -->
 	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Home.js"></script>
 	<div><%@include file="/WEB-INF/includes/ModalRegistration.jsp"%></div>
-	<div><%@include file="/WEB-INF/includes/ModalLogin.jsp"%></div>
+    <div><%@include file="/WEB-INF/includes/ModalLogin.jsp"%></div>
+      
 </body>
 </html>
 
