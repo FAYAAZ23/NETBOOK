@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-dark bg-info navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="Home">NETBOOK</a>
@@ -25,10 +25,10 @@
           <sec:authorize access="isAuthenticated()">
           
          
-          <li><a style="color: white">Hello <b><sec:authentication
+          <li><a style="color:light blue">Hello <b><sec:authentication
 										property="principal.username" /></b></a></li>
 						<li><a href="${pageContext.request.contextPath}/perform_logout"><span
-								class="glyphicon glyphicon-log-out">Logout</span></a></li>>
+								class="glyphicon glyphicon-log-out">Logout</span></a></li>
 					</sec:authorize>
            </ul>
 <sec:authorize access="!isAuthenticated()">
