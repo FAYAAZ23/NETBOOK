@@ -20,6 +20,10 @@
 				<div style="background-color: lightgrey">
 					<p style="padding: 10px; font-size: medium">${blog.blogDesc}</p>
 				</div>
+				
+				<div style="background-color: lightgrey">
+					<p style="padding: 10px; font-size: medium">${blog.View}</p>
+				</div>
 			</c:forEach>
 		</c:if>
 	</div>

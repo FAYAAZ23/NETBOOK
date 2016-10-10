@@ -1,5 +1,4 @@
-
-<%@ taglib prefix="sec"
+  <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 
 <div data-ng-controller="ForumController">
@@ -18,7 +17,7 @@
 					placeholder="Forum Title" data-ng-model="forumName">
 			</div>
 			<div class="form-group">
-				<label  class=text-info for="formdata">Forum Description</label>
+				<label class=text-info for="formdata">Forum Description</label>
 				<textarea draggable="false" style="resize: none" id="formdata"
 					class="form-control " rows="13" data-ng-model="forumDesc"></textarea>
 			</div>
@@ -32,30 +31,35 @@
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<!-- <th>Forum ID</th> -->
+					<th class=text-info>Forum ID</th>
 					<th class=text-info>Forum Name</th>
-					<th class=text-info colspan="2">Forum Description</th>
+					<th class=text-info>Forum Description</th>
+					<sec:authorize access="isAuthenticated()">   
+						<th class=text-info>Delete Forum</th>
+						<th class=text-info>Edit Forum</th>
+						<th class=text-info>View</th>
+					</sec:authorize>
 				</tr>
 			</thead>
 			<tbody>
 				<tr data-ng-repeat="forum in forums">
-					<td width="15%">{{forum.forumName}}</td>
-					<td width="70%">{{forum.forumDesc}}</td>
-					<td width="10%">
-						<div class="btn-group  btn-group-justified ">
-							<sec:authorize access="isAuthenticated()">
-								<div data-ng-if="accessForum(forum.f_userid)">
-									<a class="btn btn-primary btn-xs"
-										data-ng-click="deleteForum(forum.fid)">Delete</a> 
-									<a	class="btn btn-primary btn-xs"
-										data-ng-click="editForum(forum.fid)">Edit</a>
+					<td>{{forum.fid}}</td>
+					<td>{{forum.forumName}}</td>
+					<td>{{forum.forumDesc}}</td>
+					<sec:authorize access="isAuthenticated()">
+						<div data-ng-if="accessForum(forum.f_userid)">
+						<td><button data-ng-click="deleteForum(forum.fid)"
+								class="btn btn-info  btn-block btn-info">Delete</button></td>
+						<td><button data-ng-click="editForum(form.fid)"
+								class="btn btn-info  btn-block btn-info">Edit</button></td>
 								</div>
-							</sec:authorize>
-						</div>	
-					</td>
-					<td width="5%"><a href="forum/{{forum.fid}}" class="btn btn-primary btn-info">View</a></td>
-				</tr>
+					</sec:authorize>
+				
+				<td width="5%"><a href="forum/{{forum.fid}}" class="btn btn-primary btn-info">View</a></td>
+  				</tr>
 			</tbody>
+			
+			
 		</table>
 	</div>
 <input type="text" value="${sessionScope.userid}" style="margin-top: 75px" id="userid" hidden="true" />
@@ -63,4 +67,3 @@
 
 	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Forum.js"></script>
 </div>
-
