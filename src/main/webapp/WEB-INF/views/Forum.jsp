@@ -1,4 +1,4 @@
-  <%@ taglib prefix="sec"
+ <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 
 <div data-ng-controller="ForumController">
@@ -31,35 +31,32 @@
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<th class=text-info>Forum ID</th>
+					<!-- <th>Forum ID</th> -->
 					<th class=text-info>Forum Name</th>
 					<th class=text-info>Forum Description</th>
-					<sec:authorize access="isAuthenticated()">   
-						<th class=text-info>Delete Forum</th>
-						<th class=text-info>Edit Forum</th>
-						<th class=text-info>View</th>
-					</sec:authorize>
+					<th class=text-info>Delete/Edit</th>
+					<th class=text-info>View</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr data-ng-repeat="forum in forums">
-					<td>{{forum.fid}}</td>
-					<td>{{forum.forumName}}</td>
-					<td>{{forum.forumDesc}}</td>
-					<sec:authorize access="isAuthenticated()">
-						<div data-ng-if="accessForum(forum.f_userid)">
-						<td><button data-ng-click="deleteForum(forum.fid)"
-								class="btn btn-info  btn-block btn-info">Delete</button></td>
-						<td><button data-ng-click="editForum(form.fid)"
-								class="btn btn-info  btn-block btn-info">Edit</button></td>
+					<td width="15%">{{forum.forumName}}</td>
+					<td width="70%">{{forum.forumDesc}}</td>
+					<td width="10%">
+						<div class="btn-group  btn-group-justified ">
+							<sec:authorize access="isAuthenticated()">
+								<div data-ng-if="accessForum(forum.f_userid)">
+									<a class="btn btn-primary btn-info"
+										data-ng-click="deleteForum(forum.fid)">Delete</a>
+									<a	class="btn btn-primary btn-info"
+										data-ng-click="editForum(forum.fid)">Edit</a>
 								</div>
-					</sec:authorize>
-				
-				<td width="5%"><a href="forum/{{forum.fid}}" class="btn btn-primary btn-info">View</a></td>
-  				</tr>
+							</sec:authorize>
+						</div>	
+					</td>
+					<td width="5%"><a href="forum/{{forum.fid}}" class="btn btn-primary btn-info">View</a></td>
+				</tr>
 			</tbody>
-			
-			
 		</table>
 	</div>
 <input type="text" value="${sessionScope.userid}" style="margin-top: 75px" id="userid" hidden="true" />
@@ -67,3 +64,4 @@
 
 	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Forum.js"></script>
 </div>
+ 

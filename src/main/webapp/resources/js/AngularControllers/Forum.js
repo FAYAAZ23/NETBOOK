@@ -1,4 +1,6 @@
 app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
+	
+	
 	$scope.userid=document.getElementById("userid").value;
 	$scope.submit = function() {
 		var BASE_URL = 'http://localhost:8181/NETBOOK';
@@ -74,11 +76,14 @@ app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 		//alert("Hello"+f_userid);
 		if($scope.userid==f_userid)
 		{
+			console.log($scope.userid);
 			return true;
+			console.log("true");
 		}
 		else
 		{
 			return false;
+			console.log("false");
 		}
 	}
 	
