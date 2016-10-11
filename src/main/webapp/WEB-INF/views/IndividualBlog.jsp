@@ -12,12 +12,12 @@
 						<input type="number" value="${blog.bid}" id="bid">
 					</p>
 				</div>
-				<div style="background-color: lightgrey">
+				<div style="background-color: lightblue">
 					<p style="padding: 10px; font-size: large;">
 						<strong>${blog.blogName}</strong>
 					</p>
 				</div>
-				<div style="background-color: lightgrey">
+				<div style="background-color: lightblue">
 					<p style="padding: 10px; font-size: medium">${blog.blogDesc}</p>
 				</div>
 				

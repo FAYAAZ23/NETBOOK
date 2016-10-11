@@ -21,7 +21,7 @@
 				<textarea draggable="false" style="resize: none" id="formdata"
 					class="form-control " rows="13" data-ng-model="forumDesc"></textarea>
 			</div>
-			<div align="right">
+			<div align="left">
 				<button type="submit" class="btn btn-info">Save Forum</button>
 			</div>
 		</form>
@@ -46,15 +46,15 @@
 						<div class="btn-group  btn-group-justified ">
 							<sec:authorize access="isAuthenticated()">
 								<div data-ng-if="accessForum(forum.f_userid)">
-									<a class="btn btn-primary btn-info"
-										data-ng-click="deleteForum(forum.fid)">Delete</a>
-									<a	class="btn btn-primary btn-info"
+									<a class="btn btn-xs btn-info"
+										data-ng-click="deleteForum(forum.fid)">Delete</a>/
+									<a	class="btn btn-xs btn-info"
 										data-ng-click="editForum(forum.fid)">Edit</a>
 								</div>
 							</sec:authorize>
 						</div>	
 					</td>
-					<td width="5%"><a href="forum/{{forum.fid}}" class="btn btn-primary btn-info">View</a></td>
+					<td width="5%"><a href="forum/{{forum.fid}}" class="btn btn-xs btn-info">View</a></td>
 				</tr>
 			</tbody>
 		</table>
