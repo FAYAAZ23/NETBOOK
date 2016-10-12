@@ -1,12 +1,46 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+ <%@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"%>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<sec:authorize access="isAuthenticated()">
 
+<div class="container text-center">
+		<div class="row">
+			<div class="col-sm-3 well ">
+				<div class="well" data-ng-init="profileimage()" data-ng-controller="ProfileImage">
+					<p><a href="#">My Profile</a></p>
+					<img data-ng-src="data:image/JPEG;base64,{{img}}" class="img-circle" height="65px" width="65px" alt="Avatar">
+				</div>
+				<div class="well">
+				<a data-toggle="tab" href="#home" class="active">Home</a> ||
+				<a data-toggle="tab" href="#new">Settings</a>
+				</div>
+			</div>
+
+			<div class="col-sm-9">
+				<div class="tab-content">
+					<div id="home" class="tab-pane fade in active">
+						<%@include file="/WEB-INF/views/Wall.jsp"%>
+					</div>
+					<div id="new" class="tab-pane fade">
+						<h3>Image Upload</h3>
+						<%@include file="/WEB-INF/views/settings.jsp"%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		</sec:authorize>
+<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Profile.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Settings.js"></script>
 </body>
 </html>

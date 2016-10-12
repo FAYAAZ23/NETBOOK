@@ -15,6 +15,7 @@
 </head>
 <body style="padding-top: 50px; margin-bottom: 75px">
 	<header><%@include file="/WEB-INF/includes/Header.jsp"%></header>
+	 <%@include file="/WEB-INF/views/Body.jsp"%> 
 	<div style="padding-top: 25px">
 		<c:choose>
 			<c:when test="${BlogClicked}">
@@ -56,7 +57,7 @@
 			<c:otherwise>
 			
 				<sec:authorize access="hasRole('ROLE_USER')">
- +				<div class="container-fluid">
+ 				<div class="container-fluid">
 					<c:import url="/WEB-INF/views/Body.jsp">
 					</c:import>
 				</div>
@@ -64,37 +65,7 @@
 			</c:otherwise>
 		</c:choose>
 	</div>
-	<%-- <div class="container">
-		<h2>BootStrap Tabs</h2>
-		<ul class="nav nav-tabs">
-			<li><a data-toggle="tab" href="#home">Home</a></li>
-			<li><a data-toggle="tab" href="#Blog">Blog</a></li>
-			<li><a data-toggle="tab" href="#Forum">Forum</a></li>
-			<li><a data-toggle="tab" href="#Chat">Chat</a></li>
-		</ul>
-		<div class="tab-content">
-			<div id="home" class="tab-pane fade">
-				<h3>HOME</h3>
-				<p>Home Page</p>
-			</div>
-			<div id="Blog" class="tab-pane fade">
-				<h3>Blog</h3>
-				<%@include file="/WEB-INF/views/Blog.jsp"%>
-			</div>
-			<div id="Forum" class="tab-pane fade">
-				<h3>Forum</h3>
-				<%@include file="/WEB-INF/views/Forum.jsp"%>
-			</div>
-			<div id="Chat" class="tab-pane fade">
-				<h3>Chat</h3>
-				<%@include file="/WEB-INF/views/Chat.jsp"%>
-			</div>
-		</div>
-	</div>
-
- --%>
-
-
+	
 	<Footer><%@include file="/WEB-INF/includes/Foot.jsp"%></Footer>
 
 	<script type="text/javascript">

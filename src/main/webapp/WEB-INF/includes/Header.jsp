@@ -13,7 +13,7 @@
 <nav class="navbar navbar-dark bg-info navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="Home">NETBOOK</a>
+      <a class="navbar-brand" href="Home" style="color:lightblue font-family:snap ITC">NETBOOK</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav">

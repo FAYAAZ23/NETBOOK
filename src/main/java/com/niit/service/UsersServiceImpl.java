@@ -19,7 +19,7 @@ public class UsersServiceImpl implements UsersService{
 	public void UserRegistration(User user) 
 	{
 		user.setEnabled("1");       		/*User is enabled when he registers*/
-		user.setRole_name("Role_USER");     /*Default role after registration is User*/
+		user.setRole("Role_USER");     /*Default role after registration is User*/
 		usersDAO.saveOrUpdate(user);   		/*Registering new user*/
 	}
 
@@ -32,5 +32,10 @@ public class UsersServiceImpl implements UsersService{
 		/*saving session attributes*/
 		session.setAttribute("userid",user.getUserid());
 		session.setAttribute("name", user.getName());
+	}
+		
+		public User viewUser(HttpSession session) {
+		return usersDAO.viewUser((int) session.getAttribute("userid"));
+			 	
 	}
 }
