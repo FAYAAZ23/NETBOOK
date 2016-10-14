@@ -4,6 +4,7 @@
 <div data-ng-controller="BlogController">
 
 	<sec:authorize access="isAuthenticated()">
+	
 		<form role="form" data-ng-submit="submit()"
 			data-ng-controller="BlogController">
 			<h3 class=text-info align="center">Create Blog</h3>

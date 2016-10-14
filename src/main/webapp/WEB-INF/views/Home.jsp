@@ -15,7 +15,7 @@
 </head>
 <body style="padding-top: 50px; margin-bottom: 75px">
 	<header><%@include file="/WEB-INF/includes/Header.jsp"%></header>
-	 <%@include file="/WEB-INF/views/Body.jsp"%> 
+	
 	<div style="padding-top: 25px">
 		<c:choose>
 			<c:when test="${BlogClicked}">
@@ -56,12 +56,12 @@
 			</c:when>
 			<c:otherwise>
 			
-				<sec:authorize access="hasRole('ROLE_USER')">
- 				<div class="container-fluid">
+				
+ 				<div class="container">
 					<c:import url="/WEB-INF/views/Body.jsp">
 					</c:import>
 				</div>
-				</sec:authorize>
+				
 			</c:otherwise>
 		</c:choose>
 	</div>
