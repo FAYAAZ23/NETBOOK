@@ -24,7 +24,7 @@
 			</c:forEach>
 		</c:if>
 	</div>
-	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/IndividualBlog.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Blog.js"></script>
 	
 
 </div>

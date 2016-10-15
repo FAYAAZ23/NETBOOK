@@ -18,6 +18,14 @@
 	
 	<div style="padding-top: 25px">
 		<c:choose>
+		
+			<c:when test="${HomeClicked}">
+				<div class="container">
+					<c:import url="/WEB-INF/views/Home.jsp">
+					</c:import>		
+				</div>
+			</c:when>
+		
 			<c:when test="${BlogClicked}">
 				<div class="container">
 					<c:import url="/WEB-INF/views/Blog.jsp">
@@ -48,12 +56,7 @@
 					</c:import>
 					</div>
 					</c:when>
-			<c:when test="${HomeClicked}">
-				<div class="container">
-					<c:import url="/WEB-INF/views/Home.jsp">
-					</c:import>		
-				</div>
-			</c:when>
+		
 			<c:otherwise>
 			
 				
