@@ -37,25 +37,32 @@ NPM NPM is the package manager for JavaScript. Find, share, and reuse packages o
 
 Frameworks used:
 
-Bootstrap v3.3.7 Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites. Click here to downlaod Bootstrap 3.3.7 or npm install bootstrap@3
+Bootstrap v3.3.7 Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites. 
+https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip
  bootstrap.min.css
  bootstrap-theme.css
  bootstrap.min.js
 
-Font Awesome Icons v4.6.3 Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS. Click here to downlaod Font Awesome Icons v4.6.3
+Font Awesome Icons v4.6.3 Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS. http://fontawesome.io/assets/font-awesome-4.6.3.zip
+ 
  font-awesome.min.css
 
-Angular JS v1.5.8 AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you would otherwise have to write. Click here to downlaod Angular js v1.5.8 or npm install angular
+Angular JS v1.5.8 AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you would otherwise have to write.https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js
+
  angular.min.js
 
-JQuery v3.1.1 JQuery is a fast and concise JavaScript Library created in 2006 with a nice motto − Write less, do more. jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development. Click here to downlaod JQuery v3.1.1 or npm install jquery
+JQuery v3.1.1 JQuery is a fast and concise JavaScript Library created in 2006 with a nice motto − Write less, do more. jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.https://code.jquery.com/jquery-3.1.1.min.js
+
  jquery-3.1.0.min.js
 
-Lodash Lodash is a toolkit of Javascript functions that provides clean, performant methods for manipulating objects and collections. It is a "fork" of the Underscore library and provides additional functionality as well as some superior performance. Click here to downlaod lodash or npm install lodash
+Lodash Lodash is a toolkit of Javascript functions that provides clean, performant methods for manipulating objects and collections. It is a "fork" of the Underscore library and provides additional functionality as well as some superior performance.https://raw.githubusercontent.com/lodash/lodash/4.16.4/dist/lodash.js
+ 
  lodash.min.js
 
-SockJS SockJS is a browser JavaScript library that provides a WebSocket-like object. SockJS gives you a coherent, cross-browser, Javascript API which creates a low latency, full duplex, cross-domain communication channel between the browser and the web server.SockJS-node is a SockJS server for Node.js. Click here to downlaod SockJS or npm install sockjs
+SockJS SockJS is a browser JavaScript library that provides a WebSocket-like object. SockJS gives you a coherent, cross-browser, Javascript API which creates a low latency, full duplex, cross-domain communication channel between the browser and the web server.SockJS-node is a SockJS server for Node.js. http://cdn.sockjs.org/sockjs-0.3.4.min.js
+
  sockjs.min.js
 
-Stomp JS Stomp js provides a STOMP client for Web browser (using Web Sockets) or node.js applications. Click here to downlaod Stomp JS ornpm install stompjs
+Stomp JS Stomp js provides a STOMP client for Web browser (using Web Sockets) or node.js applications.https://raw.githubusercontent.com/jmesnil/stomp-websocket/master/lib/stomp.min.js
+ 
  stomp.min.js
